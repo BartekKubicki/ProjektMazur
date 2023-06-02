@@ -40,7 +40,6 @@ public class Main {
             System.out.println("1.Dodaj pracownika");
             System.out.println("2.Usuń pracownika");
             System.out.println("3.Zaktualizuj dane o pracowniku");
-            System.out.println("4.Wyszukaj pracownika po ID");
             System.out.println("5.Wyświetl liste wszystkich pracownikow");
             System.out.println("6.Wyszukaj pracownika po pozycji");
             System.out.println("Inna wartosc zakonczy program");
@@ -79,13 +78,6 @@ public class Main {
                     employeeManager.updateEmployee(id,employee);}
                     break;
 
-                }
-                case 4:
-                {
-                    int id = Integer.parseInt(bufferedReader.readLine());
-                    Employee employee = employeeManager.searchEmployeeByID(id);
-                    System.out.println(employee);
-                    break;
                 }
                 case 5:
                 {
