@@ -8,6 +8,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+
+        String FirstName = null;
+        String LastName = null;
+        String Position = null;
+        int Pay = 0;
+        int EmployeId = 0;
+        Scanner scanner = new Scanner(System.in);
+
         Employee employee1 = new Employee("John", "Doe", "Manager", 1, 75000);
         Employee employee2 = new Employee("Jane", "Smith", "Accountant", 2, 60000);
         Employee employee3 = new Employee("Michael", "Johnson", "Accountant", 3, 55000);
@@ -39,7 +47,15 @@ public class Main {
             int input = Integer.parseInt(bufferedReader.readLine());
             switch (input){
                 case 1:
-                    employeeManager.addEmployee(employee7);
+                    System.out.println("Imie(Enter): ");
+                    FirstName=scanner.nextLine();
+                    System.out.println("Nazwisko(Enter): ");
+                    LastName=scanner.nextLine();
+                    System.out.println("Stanowisko(Enter): ");
+                    Position=scanner.nextLine();
+                    System.out.println("Wypłata(Enter): ");
+                    Pay= Integer.parseInt(bufferedReader.readLine());
+                    employeeManager.addEmployee(new Employee(FirstName, LastName, Position, EmployeId++, Pay));
                     break;
                 case 2:
                 {
