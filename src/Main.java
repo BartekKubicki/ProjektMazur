@@ -41,7 +41,7 @@ public class Main {
             System.out.println("2.Usuń pracownika");
             System.out.println("3.Zaktualizuj dane o pracowniku");
             System.out.println("5.Wyświetl liste wszystkich pracownikow");
-            System.out.println("6.Wyszukaj pracownika po pozycji");
+            System.out.println("6.Wyszukaj pracownika po nazwisku");
             System.out.println("Inna wartosc zakonczy program");
             int input = Integer.parseInt(bufferedReader.readLine());
             switch (input){
@@ -86,8 +86,8 @@ public class Main {
                 }
                 case 6:
                 {
-                    String position = bufferedReader.readLine();
-                    HashSet<Employee> employeeHashSet = employeeManager.searchEmployeesByPosition(position);
+                    String lastname = bufferedReader.readLine();
+                    HashSet<Employee> employeeHashSet = employeeManager.searchEmployeesByLastName(lastname);
                     for (Employee employee: employeeHashSet
                          ) {
                         System.out.println(employee);

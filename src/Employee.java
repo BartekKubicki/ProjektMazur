@@ -2,6 +2,9 @@ public class Employee {
 
     private String firstName;
     private String lastName;
+    public String getLastName() {
+        return lastName;
+    }
     private String position;
     public void setPosition(String position) {
         this.position = position;
