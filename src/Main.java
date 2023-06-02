@@ -68,7 +68,14 @@ public class Main {
                     int id = Integer.parseInt(bufferedReader.readLine());
                     Employee employee = employeeManager.searchEmployeeByID(id);
                     if(employee != null){
-                    employee.setSalary(10000);
+                        System.out.println("Zmien pozycje(Enter): ");
+                        String NewPosition = bufferedReader.readLine();
+                        employee.setPosition(NewPosition);
+
+                        System.out.println("Zmien wypłate(Enter): ");
+                        int NewPay = Integer.parseInt(bufferedReader.readLine());
+                        employee.setSalary(NewPay);
+
                     employeeManager.updateEmployee(id,employee);}
                     break;
 
